@@ -46,15 +46,14 @@ int verificarColunas() {
 }
 
 int verificarBlocos() {
-
     for(int linha = 0; linha < 9; linha += 3) {
-
         for(int coluna = 0; coluna < 9; coluna += 3) {
 
+            int soma = 0;
+            int produto = 1;
+
             for(int i = linha; i < linha + 3; i++) {
-
                 for(int j = coluna; j < coluna + 3; j++) {
-
                     soma += sudoku[i][j];
                     produto *= sudoku[i][j];
                 }
@@ -64,7 +63,6 @@ int verificarBlocos() {
                 return 0;
         }
     }
-
     return 1;
 }
 
